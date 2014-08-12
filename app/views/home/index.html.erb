@@ -1,1 +1,50 @@
-home#index
+<table class="table table-striped table-hover rails_sorter">
+  <thead>
+  <tr>
+    <th class="left">Name</th>
+    <th class="left">Description</th>
+    <th class="left">Count</th>
+    <td>&nbsp;</td>
+  </tr>
+  </thead>
+  <tbody>
+  <tr>
+    <td><strong>Traffic</strong></td>
+    <td>Total Number of Visitors</td>
+    <td><%= @visitors[:all_visits] %></td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td>New Visitors</td>
+    <td><%= @visitors[:number_of_new_visitors] %> (<%= @visitors[:percent_new_visitors] %>%)</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td>Returning Visitors</td>
+    <td><%= @visitors[:number_of_returning_visitors] %> (<%= @visitors[:percent_returning_visitors] %>%)</td>
+    <td>&nbsp;</td>
+  </tr>
+  </tbody>
+  <tr>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td><strong>Top Product Page Ranking</strong></td>
+    <td><strong>Product Name</strong></td>
+    <td><strong>Unique Pageviews</strong></td>
+    <td><strong>Total Pageviews</strong></td>
+  </tr>
+  <% @top_viewed_products.each.with_index(1) do |(product_id, product_views), index| %>
+              <tr>
+                <td><%= index %></td>
+                <td><%= product_id %></td>
+                <td><%= product_views[:unique_pageviews] %></td>
+                <td><%= product_views[:pageviews] %></td>
+              </tr>
+  <% end %>
+</table>
