@@ -5,3 +5,13 @@
   To use Glyphicons sprites instead of Font Awesome, replace with "require twitter-bootstrap-static/sprites"
   =require twitter-bootstrap-static/fontawesome
   */
+
+.date-range {
+    vertical-align: 4px;
+    padding: 4px;
+    font-size: 15px;
+}
+
+.well {
+    padding: 30px 30px 0px;
+}

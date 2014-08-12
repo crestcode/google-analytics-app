@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
 
+gem 'jquery-ui-rails'
 # Twitter Bootstrap
 gem 'twitter-bootstrap-rails'
 # needed for Google Analytics
