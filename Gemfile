@@ -1,5 +1,7 @@
 source 'https://rubygems.org'
 
+# Twitter Bootstrap
+gem 'twitter-bootstrap-rails'
 # needed for Google Analytics
 gem 'google-api-client'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'

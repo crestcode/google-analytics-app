@@ -2,13 +2,21 @@
 <html>
 <head>
   <title>GoogleAnalyticsApp</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
-
-<%= yield %>
-
+<div class="container">
+  <div class="navbar">
+    <div class="navbar-inner">
+      <a class="brand" href="#">Google Analytics App</a>
+      <ul class="nav">
+        <li class="active"><a href="#">Home</a></li>
+      </ul>
+    </div>
+  </div>
+  <%= yield %>
+</div>
 </body>
 </html>
